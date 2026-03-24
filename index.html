@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antiacious</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #fafafa;
+      color: #222;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Big A background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80vh;
+      height: 100vh;
+      background: url('bg.png') no-repeat center center;
+      background-size: contain;
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .page { position: relative; z-index: 1; }
+
+    /* ---- HEADER ---- */
+    .header {
+      text-align: center;
+      padding: 5rem 1.5rem 1rem;
+    }
+
+    .header img {
+      max-width: 340px;
+      width: 80%;
+      margin-bottom: 0.75rem;
+    }
+
+    .header p {
+      font-size: 0.95rem;
+      color: #aaa;
+    }
+
+    /* ---- GAME LIST ---- */
+    .games {
+      max-width: 480px;
+      margin: 3rem auto 0;
+      padding: 0 1.5rem 5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .game-link {
+      display: block;
+      text-decoration: none;
+      color: #222;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 1rem 1.25rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .game-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .game-link span {
+      color: #bbb;
+      font-weight: 400;
+      font-size: 0.85rem;
+      margin-left: 0.5rem;
+    }
+
+    /* ---- FOOTER ---- */
+    .footer {
+      text-align: center;
+      padding: 0 1.5rem 3rem;
+      font-size: 0.8rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 500px) {
+      .header { padding: 3.5rem 1.25rem 0.75rem; }
+      .header img { max-width: 260px; }
+      .games { padding: 0 1.25rem 4rem; }
+      .game-link { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+
+    <div class="header">
+      <img src="logo.png" alt="Antiacious">
+      <p>games and stuff</p>
+    </div>
+
+    <div class="games">
+
+      <!--
+        ADD YOUR GAMES HERE
+        1. Make a folder: games/my-game/ with an index.html
+        2. Add a link below
+      -->
+
+      <a class="game-link" href="games/example-game/">
+        Example Game <span>— placeholder</span>
+      </a>
+
+      <!-- MORE GAMES — just copy ↓
+
+      <a class="game-link" href="games/your-game/">
+        Your Game Name <span>— short description</span>
+      </a>
+
+      -->
+
+    </div>
+
+    <div class="footer">antiacious</div>
+
+  </div>
+
+</body>
+</html>
